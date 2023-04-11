@@ -23,5 +23,12 @@ Route::group([
     Route::post('login', 'Api\AuthController@login')->name('auth.login');
     Route::post('logout', 'Api\AuthController@logout')->name('auth.logout');
     Route::post('refresh', 'Api\AuthController@refresh')->name('auth.refresh');
-
 });
+    Route::group(['middleware' => ['auth:api']],function (){
+
+        Route::post('offer/create','Api\OfferController@create')->name('offer.create');
+    });
+
+
+
+

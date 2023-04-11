@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Business\ProductManager;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
